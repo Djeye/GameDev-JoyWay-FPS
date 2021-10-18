@@ -17,15 +17,14 @@ namespace joyway.Enemy
             _startColor = _renderer.material.color;
         }
 
-        private void ChangeSkinEffect(Color color)
-        {
-            _renderer.material.color = color;
-        }
-
         public void ResetEffects() => ChangeSkinEffect(_startColor);
         public void SetFireEffect() => ChangeSkinEffect(fireColor);
         public void SetWaterEffect() => ChangeSkinEffect(waterColor);
 
+        private void ChangeSkinEffect(Color color)
+        {
+            _renderer.material.color = color;
+        }
 
         public bool InFire()
         {

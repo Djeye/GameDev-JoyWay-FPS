@@ -1,9 +1,7 @@
-using System.Collections;
 using UnityEngine;
 
 namespace joyway.Weapons
 {
-    [RequireComponent(typeof(Outline))]
     public abstract class Weapon : MonoBehaviour
     {
         [SerializeField] private int damage;
@@ -11,19 +9,13 @@ namespace joyway.Weapons
         private Quaternion _startRotation;
         private Transform _parent;
         protected Transform _transform;
-        private Outline _outline;
 
         private void Start()
         {
-            _outline = GetComponent<Outline>();
             _transform = transform;
             _startPosition = _transform.position;
             _startRotation = _transform.rotation;
             _parent = _transform.parent;
-        }
-
-        public virtual void Fire()
-        {
         }
 
         public void MoveToHand(Transform hand)
@@ -44,6 +36,10 @@ namespace joyway.Weapons
         public int GetDamage()
         {
             return damage;
+        }
+        
+        public virtual void Fire()
+        {
         }
     }
 }

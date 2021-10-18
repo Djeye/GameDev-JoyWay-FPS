@@ -6,10 +6,17 @@ namespace joyway.Weapons.Projectiles
     {
         [SerializeField] private float speed;
         [SerializeField] private float damage;
-        
+
+        private Transform _transform;
+
+        private void Start()
+        {
+            _transform = transform;
+        }
+
         void Update()
         {
-            transform.position += transform.up * speed * Time.deltaTime;
+            _transform.position += _transform.up * speed * Time.deltaTime;
         }
 
         public float TakeDamage()

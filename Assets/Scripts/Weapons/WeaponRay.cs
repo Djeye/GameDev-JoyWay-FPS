@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using joyway.Enemy;
+﻿using System.Collections;
 using UnityEngine;
 
 namespace joyway.Weapons

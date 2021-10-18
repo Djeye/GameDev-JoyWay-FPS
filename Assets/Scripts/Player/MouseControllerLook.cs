@@ -18,12 +18,12 @@ namespace joyway.Player
             _transform = transform;
         }
 
-        void Start()
+        private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        void Update()
+        private void Update()
         {
             ApplyMousePointerChange();
         }

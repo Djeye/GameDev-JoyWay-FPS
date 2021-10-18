@@ -1,5 +1,4 @@
-﻿using System;
-using joyway.Enemy;
+﻿using joyway.Enemy;
 using joyway.Player;
 using UnityEngine;
 
@@ -7,7 +6,7 @@ namespace joyway
 {
     public class EnemySpawner : MonoBehaviour
     {
-        [SerializeField] private Scarecrow enemy;
+        [SerializeField] private EnemyManager enemy;
         [SerializeField] private InputManager inputManager;
 
         private void Start()

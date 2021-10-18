@@ -34,7 +34,6 @@ namespace joyway.Player
             {
                 if (hitInfo.transform.parent.TryGetComponent(out Weapon weapon))
                 {
-                    //weapon.EnableOutline(hitInfo.transform.parent);
                     EquipWeapon(weapon);
                 }
             }
